@@ -1,0 +1,37 @@
+.jumbotron{
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.btn {
+    margin: 20px;
+}
+
+#weatherReport{
+    border:black solid 1px;
+    text-align: left;
+}
+
+.fiveDayForecast{
+    text-align: left;
+    margin-top: 40px;
+}
+
+#searchBox{
+    margin: 10px;
+}
+
+#day1,
+#day2,
+#day3,
+#day4,
+#day5{
+    border: black solid 1px;
+    text-align: left;
+    background-color: rgb(38, 38, 85);
+    color: white;
+}
+
+.hide{
+    display: none;
+}

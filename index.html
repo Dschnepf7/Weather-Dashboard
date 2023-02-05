@@ -10,6 +10,80 @@
     <link rel="stylesheet" href="./Assets/CSS/style.css">
 </head>
 <body>
+    <div class="jumbotron">
+        <h1 class="display-4">Weather Dashboard</h1>
+        <hr class="my-4">
+      </div>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-2" id="searchBox">
+            <label for="exampleDataList" class="form-label">Search For a City</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+            <datalist id="datalistOptions">
+              <option value="San Francisco">
+              <option value="New York">
+              <option value="Seattle">
+              <option value="Los Angeles">
+              <option value="Chicago">
+            </datalist>
+            <button type="button" class="btn btn-primary">Search</button>
+            <hr class="my-2">
+          </div>
+          <div class="col">
+            <div class="container hide" id="weatherReport">
+                <h2>City</h2>
+                <p>Temp:</p>
+                <p>Wind:</p>
+                <p>Humidity:</p>
+            </div>
+              <h2 class="fiveDayForecast hide">5 Day Forecast:</h2>
+              <div class="container text-center">
+                <div class="row hide">
+                  <div id="days" class="col">
+                    <div class="container" id="day1">
+                        <h4>Date</h4>
+                        <p>Temp:</p>
+                        <p>Wind:</p>
+                        <p>Humidity:</p>
+                    </div>
+                  </div>
+                  <div id="days" class="col">
+                    <div class="container" id="day2">
+                        <h4>Date</h4>
+                        <p>Temp:</p>
+                        <p>Wind:</p>
+                        <p>Humidity:</p>
+                    </div>
+                  </div>
+                  <div id="days" class="col">
+                    <div class="container" id="day3">
+                        <h4>Date</h4>
+                        <p>Temp:</p>
+                        <p>Wind:</p>
+                        <p>Humidity:</p>
+                    </div>
+                  </div>
+                  <div id="days" class="col">
+                    <div class="container" id="day4">
+                        <h4>Date</h4>
+                        <p>Temp:</p>
+                        <p>Wind:</p>
+                        <p>Humidity:</p>
+                    </div>
+                  </div>
+                  <div id="days" class="col">
+                    <div class="container" id="day5">
+                        <h4>Date</h4>
+                        <p>Temp:</p>
+                        <p>Wind:</p>
+                        <p>Humidity:</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
     
 
 
