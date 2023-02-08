@@ -2,11 +2,32 @@ var apiKey = "1f45372791d6a8f4d5d597d252e267c5"
 
 var searchButton = document.querySelector("#searchButton");
 var textInput = document.querySelector("#searchBar");
-
+var searchDiv = document.getElementById("searchHistory");
+var cityBtn = document.querySelector(".cityBtn");
 var baseURL = "https://api.openweathermap.org/"
 
 
 var cities = JSON.parse(localStorage.getItem("cities")) || [];
+
+function searchHistory() {
+    for (let i = 0; i < 5; i++) {
+        var historyBtn = document.createElement("button");
+        historyBtn.textContent = cities[i]
+        historyBtn.classList.add("cityBtn");
+        searchDiv.appendChild(historyBtn);
+        historyBtn.style.display = "block";
+
+        
+
+    }
+}
+searchHistory();
+
+// window.onload = cityBtn.addEventListener('click', function(){
+//     console.log("test");
+
+// })
+
 
 searchButton.addEventListener('click', function () {
 
@@ -96,11 +117,17 @@ searchButton.addEventListener('click', function () {
 
                     // console.log(days)
                     // console.log(days[0]);
-                    document.getElementById("tomorrowDate").textContent=days[0];
-                    document.getElementById("twoDaysDate").textContent=days[1];
-                    document.getElementById("threeDaysDate").textContent=days[2];
-                    document.getElementById("fourDaysDate").textContent=days[3];
-                    document.getElementById("fiveDaysDate").textContent=days[4];
+                    document.getElementById("tomorrowDate").textContent = days[0];
+                    document.getElementById("twoDaysDate").textContent = days[1];
+                    document.getElementById("threeDaysDate").textContent = days[2];
+                    document.getElementById("fourDaysDate").textContent = days[3];
+                    document.getElementById("fiveDaysDate").textContent = days[4];
+
+                    let iconOneDay = "" + "https://openweathermap.org/img/w/" + dataOneDay.weather[0].icon + ".png";
+                    let icon = document.createElement("img");
+                    icon.setAttribute("src", iconOneDay);
+                    icon.setAttribute("id", "icon-one-day");
+                    document.getElementById("currentCity").appendChild(icon);
                 })
         })
 })
